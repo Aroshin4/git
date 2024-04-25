@@ -1,0 +1,38 @@
+#数値をスペース区切りで複数入力
+x = list(map(int, input("数値をスペース区切りで複数入力して下さい ").split()))
+n = len(x)
+#for文の例
+for i in range(n):
+    print(x[i] + 1)
+#listに対しての操作
+A = list(map(int, input().split()))
+counter = 0
+while all(a % 2 == 0 for a in A):
+  A = [a // 2 for a in A]
+    counter +=  
+print(counter)
+#降順並び替え
+N= sorted(a,reverse=True)
+#リスト A を空のリストとして初期化し、for ループ内で要素を追加
+n = int(input())
+A = []
+for i in range(n):
+    A.append(int(input()))
+#文字列の配列を横並びに出力
+L = ["a","b","c","d"]
+L=' '.join(L)
+print(L)
+#リスト型を数字の羅列として出力
+for i in range(0,x[0]):
+    if A[i]%x[1]==0:
+        A[i]=A[i]/x[1]
+        ans.append(str(int(A[i])))
+output = ' '.join(ans)
+print(output)
+#空の文字列に追加していく
+n = int(input())
+a=""
+for i in range(1,n+1):
+    a +='o'
+    if i%3==0:
+        a +='x'
