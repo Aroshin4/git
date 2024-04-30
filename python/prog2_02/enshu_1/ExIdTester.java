@@ -22,7 +22,7 @@ class ExId {
 		return ExId.step;
 	} 
 	public static int getMaxId(){
-          return ExId.counter;
+        return ExId.counter;
 	}
 
 	//--- 識別番号を取得 ---//
@@ -53,5 +53,8 @@ public class ExIdTester {
 		System.out.println("ExId.counter = " + ExId.getMaxId());
 		System.out.println("a.counter  = " +  a.getMaxId());
 		System.out.println("b.counter  = " +  b.getMaxId());
+	}
+}
+
 	}
 }
