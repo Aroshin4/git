@@ -1,14 +1,9 @@
-// 演習1: クラスIdの拡張 ExIdTester.java
-// 識別番号クラス（その１）
-
 class ExId {
 	private static int counter = 0;		// 何番までの識別番号を与えたか
     private static int step = 1;
 	private int id;				// 識別番号
 
-	//--- コンストラクタ ---//
 	public ExId() {
-		
 		if(counter>2){
 			step=3;
 			id=counter+step;
@@ -51,10 +46,8 @@ public class ExIdTester {
 		System.out.println("fの識別番号:" + f.getId());
 
 		System.out.println("ExId.counter = " + ExId.getMaxId());
-		System.out.println("a.counter  = " +  a.getMaxId());
-		System.out.println("b.counter  = " +  b.getMaxId());
+		System.out.println("a.getMaxId() = " +  a.getMaxId());
+		System.out.println("b.getMaxId() = " +  b.getMaxId());
 	}
 }
 
-	}
-}
