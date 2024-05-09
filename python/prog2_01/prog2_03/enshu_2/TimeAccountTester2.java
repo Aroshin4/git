@@ -1,7 +1,6 @@
-// 演習問題2：銀行口座クラスの活用 TimeAccountTester2.java
 class TimeAccountTester2{
     static int compBalance(Account a,Account b){
-        if(b instanceof TimeAccount){
+        if(b instanceof TimeAccount&& a instanceof Account){
             if ((a.getBalance()) > (b.getBalance()+b.getTimeBalance())){
                 return 1;
             } 
@@ -12,7 +11,7 @@ class TimeAccountTester2{
                 return 0;
             }
         }
-        if(a instanceof TimeAccount){
+        if(a instanceof TimeAccount && b instanceof Account){
             if ((a.getBalance()+a.getTimeBalance()) > (b.getBalance())){
                 return 1;
             } 
@@ -46,5 +45,4 @@ class TimeAccountTester2{
     }
     }
 }
-
 
