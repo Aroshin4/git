@@ -1,15 +1,38 @@
 // 演習問題2：銀行口座クラスの活用 TimeAccountTester2.java
 class TimeAccountTester2{
     static int compBalance(Account a,Account b){
-        if ((a.getBalance()+a.getTimeBalance()) > (b.getBalance()+b.getTimeBalance())){
-            return 1;
-        } 
-        else if((a.getBalance()+a.getTimeBalance()) < (b.getBalance()+b.getTimeBalance())){
-            return -1;
-        }else
-        {
-            return 0;
+        if(b instanceof TimeAccount){
+            if ((a.getBalance()) > (b.getBalance()+b.getTimeBalance())){
+                return 1;
+            } 
+            else if((a.getBalance()) < (b.getBalance()+b.getTimeBalance())){
+                return -1;
+            }else
+            {
+                return 0;
+            }
         }
+        if(a instanceof TimeAccount){
+            if ((a.getBalance()+a.getTimeBalance()) > (b.getBalance())){
+                return 1;
+            } 
+            else if((a.getBalance()+a.getTimeBalance()) < (b.getBalance())){
+                return -1;
+            }else
+            {
+                return 0;
+            }
+        }else{
+           if ((a.getBalance()+a.getTimeBalance()) > (b.getBalance()+b.getTimeBalance())){
+            return 1;
+           } 
+           else if((a.getBalance()+a.getTimeBalance()) < (b.getBalance()+b.getTimeBalance())){
+            return -1;
+           }else
+           {
+            return 0;
+           }
+    }
     }
     public static void main(String[] args){
     Account a = new Account("adachi","1234" , 800, 2000,4,20);
@@ -23,4 +46,5 @@ class TimeAccountTester2{
     }
     }
 }
+
 
