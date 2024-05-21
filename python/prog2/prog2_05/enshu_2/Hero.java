@@ -32,7 +32,7 @@ public class Hero extends Character implements Fighter,Wizard{
 	    target.damage( (int) (3 * power));
 	}
 	else if(rnd.nextInt(6) == 2||rnd.nextInt(5) == 3){  //暴発
-	    System.out.println(name + " の魔法攻撃が暴発!! " );
+	    System.out.println(name + " の魔法攻撃が暴発し、回復魔法になってしまった!! " );
 	    target.damage(-1*power*2);
 	}else{                          // 普通の攻撃
 		System.out.println(name + " が " + target.getName() + " に魔法攻撃!!");

@@ -1,7 +1,7 @@
 // インタフェースUpperBoundedを書く
-??? ??? UpperBounded{
+public interface UpperBounded {
 
-	??? ???(double x, double y);	
+	boolean inside(double x, double y);	
 
 }
 

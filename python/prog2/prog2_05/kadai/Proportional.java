@@ -1,19 +1,18 @@
 // サブクラスProportionalを書く
-??? ??? Proportional ??? FunctionQI ??? UpperBounded{
+public class Proportional extends FunctionQI implements UpperBounded{
 
-	public Proportional(String name){ ???(name); }
+	public Proportional(String name){ super(name); }
 
-	@??? ??? ??? toString(){
-		return String.format("%s: f(x) = ???", ???.???());
+	@Override public String toString(){
+		return String.format("%s: f(x) = x", super.toString());
 	}
 
-	@O??? public double f(double x){
-		return ?;
+	@Override public double f(double x){
+		return x;
 	}
 
-	@??? public boolean ???(double x, double y){
-		return ???;
+	@Override public boolean inside(double x, double y){
+		return y <=f(x);
 	}
-
 }
 

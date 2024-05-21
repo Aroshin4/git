@@ -13,12 +13,12 @@ public class Enemy extends Character implements Fighter{
 	power = 70 + rnd.nextInt(20);
     }
     
-    public void attack(Character target){
+    @Override public void attack(Character target){
 	System.out.println(name + " が " + target.getName() + " に襲い掛かる!!");
 	target.damage(power);
     }
     
-    public void damage(int dp){
+    @Override public void damage(int dp){
 		if(dp>0){
 	System.out.println(name + " は " + dp + " のダメージを受けた!!");
 	hitPoint -= dp; // 攻撃力分をhpから減算

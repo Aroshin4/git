@@ -1,45 +1,45 @@
 // mainメソッドを含むMonteCarloTesterクラスを書く
-??? java.util.SplittableRandom;
+import java.util.SplittableRandom;
 
-??? ??? MonteCarloTester{
+public class MonteCarloTester {
 
-	private ??? static int ITERATION = 10000;
-	private ??? static long SEED = 0;
+	private final static int ITERATION = 10000;
+	private final static long SEED = 0;
 
 	private static SplittableRandom random = new SplittableRandom(SEED);
 
-	public static ??? area(???){
+	public static double area(UpperBounded u){
 
 		int count=0;
 
 		for(int i = 0;i < ITERATION;i++){
-			double x = random.nextDouble(1.);		
-			double ??? = ???;
+			double x = random.nextDouble(1.0);		
+			double y = random.nextDouble(1.0);
 	
-			if(u.???(x, y)) ???++;	
+			if(u.inside(x, y)) count++;	
 		}
 
-		return (double)??? / ITERATION;
+		return (double)count / ITERATION;
 	}
 
 	public static void main(String args[]){
 
 		UpperBounded funcs[] = {
-			??? Proportional(???),
-			??? Quadrant(???),
-			??? And(??? Proportional(???), ??? Quadrant(???)),
+			new Proportional("Proportional"),
+			new Quadrant("Quadrant"),
+			new And(new Proportional("Proportional"), new Quadrant("Quadrant")),
 		};
 
-		for(??? f : ???){
+		for(UpperBounded f : funcs){
 			System.out.println(f);
-			if(f ??? ???){
-				FunctionQI q = ??? f;
+			if(f instanceof FunctionQI){
+				FunctionQI q = (FunctionQI) f;
 				for(double x = 0.; x <= 1.; x += .25){
-					System.out.println(String.format(" f(%f) = %f", ???, ???));
+					System.out.println(String.format(" f(%f) = %f", x, q.f(x)));
 				}
 
 			}
-			System.out.println(String.format("Area=" + ???));
+			System.out.println(String.format("Area=" + area(f)));
 		}
 
 	}
