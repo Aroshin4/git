@@ -1,0 +1,20 @@
+  README: The Java Developers Kit
+
+
+This 1.0 release of the Java Developers Kit (JDK) lets you
+write applets that conform to the 1.0 Java applet API.  
+
+
+The JDK helps you to:
+---------------------
+	- Develop applets that conform to the final applet API
+	- Create applets that run in all Java-enabled browsers
+	- Develop Java applications
+	- Experiment with the debugger API (and a prototype
+	  command-line debugger)
+ 
+
+Supported platforms
+-------------------
+The JDK is available for SPARC Solaris, Windows NT, and Windows 95.
+...
