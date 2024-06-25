@@ -16,7 +16,9 @@ public class MyStringArrayListTester {
         for(int i = 0; i<=list.size()-1;i++){
             System.out.println(list.get(i));
         }
-        System.out.println("<IndexOutOfBoundsExceptioが投げられる場合>");
+        System.out.println("<格納されている要素数が正しく取得できていることを確認>");
+        System.out.println(list.size());
+        System.out.println("<IndexOutOfBoundsExceptionが投げられる場合>");
         try{
             list.get(10);
         }catch(IndexOutOfBoundsException e){
