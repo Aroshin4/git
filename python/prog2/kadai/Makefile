@@ -5,17 +5,22 @@ JAVA	= java
 SRC	= $(wildcard *.java)
 CLASS	= $(SRC:.java=.class)
 PROGRAM	= $(shell pwd)
-MAIN	= TriangleTester
+kadai1	= GraphTester
+kadai2	= BFSTester
+kadai3	= DFSTester
 
 all: $(CLASS)
 
-test: $(CLASS)
-	$(JAVA) $(MAIN)
+kadai1:;$(CLASS)
+        $(JAVA) $(kadai1)
 
-$(CLASS): $(SRC)
+kadai2:;$(CLASS)
+        $(JAVA) $(kadai2)
+
+test:;
+	@echo 今回は make test は使用しません
 
 .java.class:
 	$(JAVAC) $<
 
 clean:;	\rm -f *.class
-
